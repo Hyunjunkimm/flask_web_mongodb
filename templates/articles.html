@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+</head>
+​
+
+<body>
+    <h1>게시판</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>AUTHOR</th>
+            <th>DATE</th>
+            <th>EDIT</th>
+            ​
+        </tr>
+        {% for article in articles %}
+        <tr>
+            <td>{{ article['id'] }}</td>
+            <td>{{ article['title'] }}</td>
+            <td>{{ article['author'] }}</td>
+            <td>2021-09-02</td>
+            <td><button>편집</button><button>제거</button></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+​
+
+</html>
